@@ -33,14 +33,12 @@ $HOME/
 │   └── skills/              # Глобальные скиллы (каждый — отдельная папка с SKILL.md)
 │       ├── caveman/
 │       │   └── SKILL.md
-│       ├── explain-complex-code/
-│       │   └── SKILL.md
-│       │   └── prompts/
-│       │       ├── eli5.md
-│       │       ├── feynman.md
-│       │       └── gradual.md
-│       └── git-security/
+│       └── explain-complex-code/
 │           └── SKILL.md
+│           └── prompts/
+│               ├── eli5.md
+│               ├── feynman.md
+│               └── gradual.md
 └── .notes/                  # Скрытая папка для заметок
     ├── INBOX/               # Входящие — агент разбирает автоматически
     │   └── random-thoughts.md

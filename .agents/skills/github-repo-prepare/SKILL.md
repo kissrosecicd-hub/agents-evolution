@@ -1,6 +1,6 @@
 ---
 name: github-repo-prepare
-description: Подготовить проект к публикации на GitHub: .gitignore, аудит безопасности, README.md, LICENSE, .env.example, скриншоты, проверка имени.
+description: "Подготовить проект к публикации на GitHub: .gitignore, аудит безопасности, README.md, LICENSE, .env.example, скриншоты, проверка имени."
 triggers: "подготовь к публикации", "подготовь к гитхаб", "github prepare", "подготовить репозиторий", "подготовка к публикации", "сделай README для гитхаб", "скриншоты для README", "подготовь репо", "github prep"
 ---
 

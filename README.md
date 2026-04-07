@@ -30,30 +30,68 @@ $HOME/AGENTS.md              # Глобально для всех проекто
 - Агент должен найти его при сканировании HOME или директории CLI/IDE
 - Это позволяет агенту действовать по правилам **независимо от IDE/CLI**
 
-## Структура файлов агента
+## Структура репозитория
+
+### `.agents/skills/` — единый источник всех скиллов
+
+```
+.agents/skills/
+├── caveman/                    # Сжатая коммуникация (~75% экономия токенов)
+│   └── SKILL.md
+├── explain-complex-code/       # Объяснение кода (ELI5 → Feynman → Gradual)
+│   ├── SKILL.md
+│   └── prompts/
+│       ├── eli5.md
+│       ├── feynman.md
+│       └── gradual.md
+├── subagent-creator-universal/ # Создание агентов для 6 CLI/IDE
+│   └── SKILL.md
+├── meta/orchestration/         # Мета-оркестрация субагентов
+│   ├── spawn/                  #   кого, когда и сколько запускать
+│   ├── synthesis/              #   как собирать результаты без дублей
+│   ├── recovery/               #   что делать когда агент упал
+│   └── multi-session-worker/   #   tmux-воркеры, IPC через файлы
+└── .template/                  # Шаблон нового скилла
+```
+
+### `.agents/ExampleSubagents/` — примеры субагентов (вдохновение)
+
+```
+.agents/ExampleSubagents/
+├── code-reviewer.md
+├── debugger.md
+├── security-auditor.md
+├── test-architect.md
+├── playwright-e2e-auditor.md
+├── refactor-architect.md
+├── docs-writer.md
+├── git-doctor.md
+├── dependency-manager.md
+├── agent-organizer.md
+├── onboarding-scout.md
+├── release-manager.md
+└── meta/                       # Мета-агенты примеры
+    ├── agent-organizer.md
+    ├── onboarding-scout.md
+    └── release-manager.md
+```
+
+### Структура после установки
 
 ```
 $HOME/
-├── AGENTS.md                # Главные правила поведения агента
+├── AGENTS.md                   # Главные правила поведения агента
 ├── .agents/
-│   └── skills/              # Глобальные агентские скиллы (внешние/скачанные)
-│       ├── caveman/
-│       │   └── SKILL.md
-│       └── explain-complex-code/
-│           └── SKILL.md
-│           └── prompts/
-│               ├── eli5.md
-│               ├── feynman.md
-│               └── gradual.md
+│   ├── skills/                 # Глобальные агентские скиллы
+│   │   ├── caveman/
+│   │   ├── explain-complex-code/
+│   │   ├── subagent-creator-universal/
+│   │   └── meta/orchestration/
+│   └── ExampleSubagents/       # Примеры субагентов (вдохновение)
 ├── .myskills/
-│   └── skills/              # Глобальные пользовательские скиллы (рабочие/свои)
-│       └── your-skill/
-│           └── SKILL.md
-└── .notes/                  # Скрытая папка для заметок
-    ├── INBOX/               # Входящие — агент разбирает автоматически
-    │   └── random-thoughts.md
-    ├── github-token-setup.md
-    └── lesson-learnings.md
+│   └── skills/                 # Пользовательские скиллы (свои)
+└── .notes/
+    └── INBOX/                  # Входящие — агент разбирает автоматически
 ```
 
 ## Двухуровневая система скиллов

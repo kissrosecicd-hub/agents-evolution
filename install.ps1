@@ -35,10 +35,14 @@ Write-Host "📄 Копирую AGENTS.md → $HOME_DIR\" -ForegroundColor Yello
 Copy-Item "$SCRIPT_DIR\AGENTS.md" "$HOME_DIR\AGENTS.md" -Force
 Write-Host "   ✅ AGENTS.md установлен" -ForegroundColor Green
 
-# 2. Создаём .agents\skills\
+# 2. Создаём .agents\skills\ и .myskills\skills\
 Write-Host "📁 Создаю .agents\skills\" -ForegroundColor Yellow
 $skillsDir = Join-Path $HOME_DIR ".agents\skills"
 New-Item -ItemType Directory -Path $skillsDir -Force | Out-Null
+
+Write-Host "📁 Создаю .myskills\skills\" -ForegroundColor Yellow
+$mySkillsDir = Join-Path $HOME_DIR ".myskills\skills"
+New-Item -ItemType Directory -Path $mySkillsDir -Force | Out-Null
 
 # 3. Копируем скиллы
 if (Test-Path "$SCRIPT_DIR\skills") {
@@ -66,9 +70,10 @@ Write-Host "║          ✅ Установка завершена!         ║"
 Write-Host "╚══════════════════════════════════════════╝" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Установлено:" -ForegroundColor Green
-Write-Host "  📄 AGENTS.md → $HOME_DIR\AGENTS.md"
-Write-Host "  🧩 Скиллы  → $HOME_DIR\.agents\skills\"
-Write-Host "  📝 Заметки → $HOME_DIR\.notes\INBOX\"
+Write-Host "  📄 AGENTS.md   → $HOME_DIR\AGENTS.md"
+Write-Host "  🧩 Скиллы      → $HOME_DIR\.agents\skills\"
+Write-Host "  🔧 User Skills  → $HOME_DIR\.myskills\skills\"
+Write-Host "  📝 Заметки     → $HOME_DIR\.notes\INBOX\"
 Write-Host ""
 Write-Host "Следующие шаги:" -ForegroundColor Yellow
 Write-Host "  1. Откройте ваш AI-агент (Qwen, Claude, Cursor...)"

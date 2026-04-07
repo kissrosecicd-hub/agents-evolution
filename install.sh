@@ -42,9 +42,11 @@ echo -e "${YELLOW}📄 Копирую AGENTS.md → $HOME_DIR/${NC}"
 cp "$SCRIPT_DIR/AGENTS.md" "$HOME_DIR/AGENTS.md"
 echo -e "${GREEN}   ✅ AGENTS.md установлен${NC}"
 
-# 2. Создаём .agents/skills/
+# 2. Создаём .agents/skills/ и .myskills/skills/
 echo -e "${YELLOW}📁 Создаю ~/.agents/skills/${NC}"
 mkdir -p "$HOME_DIR/.agents/skills"
+echo -e "${YELLOW}📁 Создаю ~/.myskills/skills/${NC}"
+mkdir -p "$HOME_DIR/.myskills/skills"
 
 # 3. Копируем скиллы
 if [ -d "$SCRIPT_DIR/skills" ]; then
@@ -73,9 +75,10 @@ echo -e "${CYAN}║          ✅ Установка завершена!         
 echo -e "${CYAN}╚══════════════════════════════════════════╝${NC}"
 echo ""
 echo -e "${GREEN}Установлено:${NC}"
-echo -e "  📄 AGENTS.md → $HOME_DIR/AGENTS.md"
-echo -e "  🧩 Скиллы  → $HOME_DIR/.agents/skills/"
-echo -e "  📝 Заметки → $HOME_DIR/.notes/INBOX/"
+echo -e "  📄 AGENTS.md  → $HOME_DIR/AGENTS.md"
+echo -e "  🧩 Скиллы     → $HOME_DIR/.agents/skills/"
+echo -e "  🔧 User Skills → $HOME_DIR/.myskills/skills/"
+echo -e "  📝 Заметки    → $HOME_DIR/.notes/INBOX/"
 echo ""
 echo -e "${YELLOW}Следующие шаги:${NC}"
 echo -e "  1. Откройте ваш AI-агент (Qwen, Claude, Cursor...)"

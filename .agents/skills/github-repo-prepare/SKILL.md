@@ -1,7 +1,16 @@
 ---
 name: github-repo-prepare
 description: "Подготовить проект к публикации на GitHub: .gitignore, аудит безопасности, README.md, LICENSE, .env.example, скриншоты, проверка имени."
-triggers: "подготовь к публикации", "подготовь к гитхаб", "github prepare", "подготовить репозиторий", "подготовка к публикации", "сделай README для гитхаб", "скриншоты для README", "подготовь репо", "github prep"
+triggers:
+  - "подготовь к публикации"
+  - "подготовь к гитхаб"
+  - "github prepare"
+  - "подготовить репозиторий"
+  - "подготовка к публикации"
+  - "сделай README для гитхаб"
+  - "скриншоты для README"
+  - "подготовь репо"
+  - "github prep"
 ---
 
 # GitHub Repository Preparation
@@ -213,7 +222,16 @@ git push -u origin main
 
 ## audit-gitignore.sh — Шаблон скрипта
 
-Создай `scripts/audit-gitignore.sh`:
+Скрипт: `scripts/audit-gitignore.sh`
+
+Проверяет:
+- Какие файлы реально игнорируются
+- Опасные файлы которые МОГУТ попасть в коммит
+- Скан на секреты в коде (API keys, passwords, private keys)
+- Рекомендации по .gitignore
+
+<details>
+<summary>Содержимое scripts/audit-gitignore.sh</summary>
 
 ```bash
 #!/usr/bin/env bash
@@ -327,6 +345,7 @@ else
   exit 0
 fi
 ```
+</details>
 
 ## Быстрый чеклист
 

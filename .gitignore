@@ -1,0 +1,26 @@
+# Secrets
+.env
+.env.*
+.credentials
+*.key
+*.pem
+*.secret
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Notes INBOX (processed files should not be committed)
+.notes/INBOX/*
+!.notes/INBOX/.gitkeep
+.mynotes/INBOX/*
+!.mynotes/INBOX/.gitkeep
+
+# Workers runtime
+.workers/

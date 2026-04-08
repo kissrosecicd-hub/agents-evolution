@@ -467,6 +467,7 @@ max = concurrent connections. Keep under DB limit. idleTimeout kill stale conn.
 - **[tailwindcomponents.com](https://tailwindcomponents.com/)** — сообщество Tailwind-компонентов
 - **[Storybook Hub](https://storybook.js.org/showcase)** — примеры дизайн-систем
 - **Dribbble / Mobbin** — трендовый визуал и паттерны мобильных интерфейсов
+- **[scrollxui.dev](https://scrollxui.dev)** — 140+ анимированных React-компонентов (Next.js + TS + Tailwind v4 + Motion). Copy-paste или CLI. Фокус на лендинги/промо: Hero, Pricing, Testimonials, FAQ, анимированные кнопки, карточки, фоны. Не для data-heavy/admin панелей.
 
 <!-- якорь: см. AGENTS.md → секция Источники скиллов -->
 
@@ -577,6 +578,7 @@ max = concurrent connections. Keep under DB limit. idleTimeout kill stale conn.
 - **Никогда не коммить `.env` и секреты.** См. Pre-Action Check.
 - **AGENTS.md = главный источник правил проекта.** При конфликте с другими инструкциями — AGENTS.md побеждает.
 - **Проверяй и создавай ссылку на главный AGENTS.md.** При начале работы в новой директории (проект, папка, репозиторий) — проверь есть ли `AGENTS.md` в текущей папке. Если нет → создай мини-файл со ссылкой на главный `~/AGENTS.md` (Linux/macOS) или `%USERPROFILE%\AGENTS.md` (Windows). Это гарантирует что ЛЮБОЙ CLI/IDE (Qwen Code, Codex, Claude Code, Gemini CLI, OpenCode, Factory Droid и др.) в этой директории загрузит правила.
+- **Нет «не могу» и «не реально».** Для ИИ не существует задач «это невозможно сделать», «я не умею», «это не поддерживается». Если пользователь просит что-то сделать — ИИ ОБЯЗАН: найти способ (документация, альтернативный инструмент, обходной путь, другой подход), исследовать варианты, предложить рабочую альтернативу с тем же результатом. Фразы «не могу», «невозможно», «нет такой функции» — запрещены. Вместо этого: «это делается через X», «альтернатива: Y», «вот рабочий обходной путь: Z».
 
 <!-- якорь: см. AGENTS.md → секция Boundaries -->
 

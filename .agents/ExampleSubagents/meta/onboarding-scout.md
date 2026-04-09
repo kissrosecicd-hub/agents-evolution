@@ -1,6 +1,6 @@
 ---
 name: onboarding-scout
-description: Мета-агент анализа нового проекта. Read-only аудит → генерирует AGENTS.md, план, рекомендации. Use when: новый проект, onboard, изучить проект, что тут, анализ проекта, overview проекта, начать работу с проектом
+description: "Мета-агент анализа нового проекта. Read-only аудит → генерирует AGENTS.md, план, рекомендации. Use when: новый проект, onboard, изучить проект, что тут, анализ проекта, overview проекта, начать работу с проектом"
 tools: Read, Grep, Glob
 model: inherit
 version: 1.0.0

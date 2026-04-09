@@ -1,6 +1,6 @@
 ---
 name: release-manager
-description: Мета-агент полного релиза: тесты → линт → билд → changelog → тег. Use when: релиз, выпустить версию, prepare release, deploy prep, release checklist, готовим релиз
+description: "Мета-агент полного релиза: тесты → линт → билд → changelog → тег. Use when: релиз, выпустить версию, prepare release, deploy prep, release checklist, готовим релиз"
 tools: Read, Bash, Grep
 model: inherit
 version: 1.0.0
